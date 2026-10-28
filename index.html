@@ -1,3 +1,12 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="Portofolio Aisyah Nabila Putri, S.Farm: lulusan S1 Farmasi STIFARM Padang 2026, praktek kerja apotek, penelitian, organisasi, MC, dan sertifikat.">
+<link rel="icon" type="image/png" href="img/logo.png">
+<link rel="alternate" hreflang="id" href="./">
+<link rel="alternate" hreflang="en" href="en.html">
 <title>Portofolio Aisyah Nabila Putri</title>
 <meta name="claude:viewport-fit-sides" content="cover">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -43,6 +52,10 @@ a { color: var(--navy); }
 .nav a { flex: none; text-decoration: none; color: var(--muted); font-size: .84rem; font-weight: 600; padding: 7px 12px; border-radius: 999px; transition: background .2s, color .2s; }
 .nav a:hover { color: var(--navy); background: var(--mist); }
 .nav a.on { background: var(--navy); color: var(--on-navy); }
+.lang { display: flex; flex: none; gap: 2px; padding: 3px; border: 1px solid var(--line); border-radius: 999px; }
+.lang a { text-decoration: none; color: var(--muted); font-size: .74rem; font-weight: 700; letter-spacing: .06em; padding: 4px 10px; border-radius: 999px; }
+.lang a:hover { color: var(--navy); }
+.lang a[aria-current] { background: var(--gold-soft); color: var(--navy); }
 
 /* shared */
 section { padding-block: 72px; }
@@ -270,7 +283,8 @@ footer b { color: var(--gold-soft); letter-spacing: .1em; }
   .band > strong { width: 100%; padding: 12px; }
 }
 </style>
-
+</head>
+<body>
 <svg width="0" height="0" style="position:absolute" aria-hidden="true">
   <defs>
     <symbol id="i-rx" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 21V3h6a4 4 0 0 1 0 8H6m6 0 7 10m-5-4 5-5"/></symbol>
@@ -305,6 +319,10 @@ footer b { color: var(--gold-soft); letter-spacing: .1em; }
       <a href="#sertifikat">Sertifikat</a>
       <a href="#kontak">Kontak</a>
     </nav>
+    <div class="lang" role="group" aria-label="Bahasa">
+      <a href="./" hreflang="id" lang="id" aria-current="page">ID</a>
+      <a href="en.html" hreflang="en" lang="en">EN</a>
+    </div>
   </div>
 </header>
 
@@ -664,6 +682,11 @@ footer b { color: var(--gold-soft); letter-spacing: .1em; }
     setTimeout(() => (b.textContent = "Salin"), 1800);
   }));
 
+  // language switch keeps the reader on the same section
+  document.querySelectorAll(".lang a:not([aria-current])").forEach((a) => a.addEventListener("click", () => {
+    a.href = a.getAttribute("href").split("#")[0] + location.hash;
+  }));
+
   // highlight the section in view
   const nav = document.querySelector(".nav"), links = [...nav.querySelectorAll("a")];
   const byId = new Map(links.map((a) => [a.getAttribute("href").slice(1), a]));
@@ -678,3 +701,5 @@ footer b { color: var(--gold-soft); letter-spacing: .1em; }
   }
 })();
 </script>
+</body>
+</html>
