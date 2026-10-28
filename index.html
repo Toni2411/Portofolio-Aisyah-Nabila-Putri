@@ -234,6 +234,7 @@ h3 { font-size: 1.35rem; font-weight: 700; line-height: 1.2; }
 .line div { min-width: 0; flex: 1; }
 .line small { display: block; font-size: .72rem; letter-spacing: .14em; text-transform: uppercase; color: #aab6d6; }
 .line span { font-weight: 700; overflow-wrap: anywhere; user-select: all; }
+.line a { color: var(--on-navy); font-weight: 700; overflow-wrap: anywhere; text-decoration-color: var(--gold); text-underline-offset: 3px; }
 .copy { flex: none; background: transparent; color: var(--on-navy); border: 1px solid rgba(255, 255, 255, .35); border-radius: 999px; padding: 6px 12px; font: 600 .78rem var(--body); cursor: pointer; }
 .copy:hover { background: rgba(255, 255, 255, .1); }
 .contact .ctas .btn { border-color: var(--gold); }
@@ -302,7 +303,8 @@ footer b { color: var(--gold-soft); letter-spacing: .1em; }
     <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="M5 3.5h3.5l1.8 4.6-2.4 1.6a11 11 0 0 0 6.4 6.4l1.6-2.4 4.6 1.8V19a2 2 0 0 1-2 2A16.5 16.5 0 0 1 3 5.5a2 2 0 0 1 2-2z"/></symbol>
     <symbol id="i-search" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="6.5"/><path d="m16 16 4.5 4.5"/></symbol>
     <symbol id="i-flag" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 21V4m0 0h11l-2 4 2 4H5"/></symbol>
-    <symbol id="i-cap" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m2.5 9 9.5-5 9.5 5-9.5 5z"/><path d="M6.5 11v5c1.5 1.6 3.4 2.4 5.5 2.4s4-.8 5.5-2.4v-5M21.5 9v5" stroke-linecap="round"/></symbol>
+    <symbol id="i-in" viewBox="0 0 24 24" fill="currentColor"><path d="M4.98 3.5a2.5 2.5 0 1 1 0 5 2.5 2.5 0 0 1 0-5zM3 9.75h4V21H3zM9.5 9.75h3.8v1.6h.06c.53-1 1.83-2.05 3.77-2.05 4.03 0 4.77 2.65 4.77 6.1V21h-4v-4.95c0-1.18-.02-2.7-1.65-2.7-1.65 0-1.9 1.29-1.9 2.62V21h-4z"/></symbol>
+    <symbol id="i-cap"viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"><path d="m2.5 9 9.5-5 9.5 5-9.5 5z"/><path d="M6.5 11v5c1.5 1.6 3.4 2.4 5.5 2.4s4-.8 5.5-2.4v-5M21.5 9v5" stroke-linecap="round"/></symbol>
   </defs>
 </svg>
 
@@ -638,10 +640,12 @@ footer b { color: var(--gold-soft); letter-spacing: .1em; }
         <div class="lines">
           <div class="line"><span class="ico"><svg><use href="#i-mail"/></svg></span><div><small>Email</small><span id="v-mail">aisyahnabilaputri1503@gmail.com</span></div><button class="copy" type="button" data-copy="v-mail">Salin</button></div>
           <div class="line"><span class="ico"><svg><use href="#i-phone"/></svg></span><div><small>Telepon / WhatsApp</small><span id="v-phone">+62 822-5091-7329</span></div><button class="copy" type="button" data-copy="v-phone">Salin</button></div>
+          <div class="line"><span class="ico"><svg><use href="#i-in"/></svg></span><div><small>LinkedIn</small><a href="https://www.linkedin.com/in/aisyah-nabila-putri-300029375/" target="_blank" rel="noopener">linkedin.com/in/aisyah-nabila-putri-300029375</a></div></div>
           <div class="line"><span class="ico"><svg><use href="#i-pin"/></svg></span><div><small>Domisili</small><span>Rambah, Rokan Hulu, Riau</span></div></div>
         </div>
         <div class="ctas">
           <a class="btn solid" href="https://wa.me/6282250917329" target="_blank" rel="noopener">Chat WhatsApp</a>
+          <a class="btn ghost" href="https://www.linkedin.com/in/aisyah-nabila-putri-300029375/" target="_blank" rel="noopener">LinkedIn</a>
           <a class="btn ghost" href="#beranda">Kembali ke atas</a>
         </div>
       </div>
